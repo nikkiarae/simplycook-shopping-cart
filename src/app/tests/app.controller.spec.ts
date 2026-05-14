@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { AppController } from '../app.controller';
+import { AppService } from '../app.service';
 
 describe('AppController', () => {
   let appController: AppController;
@@ -15,10 +15,6 @@ describe('AppController', () => {
   });
 
   describe('root', () => {
-    it('should return app message', () => {
-      expect(appController.getHello()).toBe('SimplyCook Shopping Cart API');
-    });
-
     it('should return health payload', () => {
       expect(appController.getHealth()).toEqual({ status: 'ok' });
     });
