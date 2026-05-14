@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { CartModule } from '../features/cart/cart.module';
 
 @Module({
+  imports: [CartModule],
   controllers: [AppController],
   providers: [AppService],
 })
